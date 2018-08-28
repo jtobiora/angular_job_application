@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+    
+<title>Login</title>
+</head>
+
+<body style="margin-top:50px;">
+
+    <div class="container">
+        <div class="row">
+             <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-6">
+                    <div  class="panel panel-default">
+                        <div class="panel-title">
+                             <h1 class="text-center text-primary">Login</h1>
+                        </div>
+                        <div class="panel-body">
+                             <div *ngIf='accounCreated !== null' style='color:red;font-size:13px;text-align:center;'>{{accountCreated}}</div>
+                             <div *ngIf='error !== null' style='color:red;font-size:13px;text-align:center;'>{{error}}</div>
+                             <form method="post" action="" (ngSubmit)="login()">
+                                    <div class="form-group">                      
+                                      <input type="email" name="email" placeholder="Email" class="form-control" required title="Enter Email" [(ngModel)] ='email'>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="password" name="password" placeholder="Password" class="form-control" required title="Enter password" [(ngModel)] ='password'>
+                                    </div>
+                                    <div class="col-md-offset-5">
+                                         <input type="submit" class="btn tf-btn btn-default" name="submit" value="Login">                                      
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+             <div class="col-md-3">&nbsp;</div>
+        </div><!------>
+    </div><!--container-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+   <div class="row">
+     <div class="col-md-8 col-md-offset-2">
+    <h2 class="text-primary" style="text-align:center;">These are the applicants that have registered so far</h2>
+    <table class="table table-bordered">
+         <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Cover Letter</th>
+            </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let user of users">
+                <td>{{user.firstName}} &nbsp; {{user.surname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phoneNumber}}</td>
+                <td>{{user.coverLetter}}</td>
+             </tr>
+         </tbody>
+    </table>
+   </div>
+  </div>
+</div>
