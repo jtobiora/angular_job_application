@@ -35,7 +35,7 @@ const appRoutes: Routes = [
       component: AdminloginComponent
     },
 
-    { path: '**', redirectTo:'sales-report', pathMatch:'full' }
+    { path: '**', redirectTo:'home', pathMatch:'full' }
 
    
 ];
